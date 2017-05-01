@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/velocity/1.5/velocity.min.js"></script>
+</head> 
+<body>
+<div id="counter-event-example">
+  <p>{{ sequence }}</p>
+  <div id="gbuttons" style="width:100%;">
+    <transition-group
+    name="custom-classes-transition"
+    enter-active-class="animated tada"
+    leave-active-class="animated bounceOutRight"
+    >
+      <gamebutton 
+        v-for="color in colors" 
+        v-bind:key="color.name" 
+        v-bind:clr="color.name" 
+        :disabled="status != 'waiting' ? true : false">
+      </gamebutton>
+    </transition-group> 
+  </div>
+  <div>
+    <button @click.prevent="addMove">Add move</button>
+    <button @click.prevent="tellMoves(sequence)">Tell move</button>
+    <span v-if="status">{{ status }}</span>
+  </div>
+</div>
+
+<style>
+  .gamebutts {
+
+  }
+  .highlight {
+    border: 5px solid yellow;
+    transition-duration: 1.5s;
+  }
+  </style>
+
+<script>
+  Vue.component('gamebutton', {
+    template: `<button v-on:click="press" :id=color v-bind:style="styles" class="gamebutts">{{ color }}</button>`,
+    props: ['clr'],
+    data: function () { 
+      return {
+        color: this.clr,
+        status,
+        styles: {
+          'background-color': this.clr,
+          'width': '150px',
+          'height': '75px'
+        }
+      }
+    },
+    methods: {
+      press: function () {
+        this.counter += 1
+        this.$emit(this.color)
+      }
+    }
+  })
+  new Vue({
+    el: '#counter-event-example',
+    data: {
+      colors: [
+        { name: 'red'},
+        { name: 'blue'},
+        { name: 'green'},
+        { name: 'yellow'},
+      ],
+      round: 0,
+      step: 0,
+      sequence: [],
+      status: 'waiting'  
+    },
+    methods: {
+      incrementTotal: function () {
+        this.sequence.push('+')
+      },
+      startGame: () => {},
+      addMove: function () {
+        this.sequence.push(this.colors[Math.floor(Math.random() * 4)])
+      },
+      tellMoves: function (seq) {
+        
+      }
+    }
+  })
+</script>
+</body>
