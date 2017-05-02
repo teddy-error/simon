@@ -1,6 +1,10 @@
-/** global vue */
+/* global vue */
 Vue.component('gamebutton', {
-  template: `<button v-on:click="press" :id=color v-bind:style="styles" class="gamebutts"></button>`,
+  template: `<button
+              v-on:click="press"
+              :id=color
+              v-bind:style="styles"
+              class="gamebutts"></button>`,
   props: ['clr', 'hex'],
   data: function () {
     return {
@@ -13,7 +17,7 @@ Vue.component('gamebutton', {
   },
   methods: {
     press: function () {
-      this.counter += 1
+      console.log(this.color + ' pressed')
       this.$emit(this.color)
     }
   }
@@ -27,23 +31,29 @@ var Simon = new Vue({
       {name: 'green', hex: '#B6FF00'},
       {name: 'yellow', hex: '#FFDD1B'}
     ],
+    debug: false,
     round: 0,
     step: 0,
     sequence: [],
-    status: 'waiting'
+    status: 'gameOver'
   },
   methods: {
-    incrementTotal: function () {
-      this.sequence.push('+')
-    },
-    startGame: () => {
+    startGame: function () {
+      Simon.addMove()
+      Simon.tellMoves()
+      this.status = 'waiting'
+      console.log(this.status)
+      // tell move 
+      // wait -> player push gamebutt
+      // if hear correct event -> goto 1
+      // else game over
     },
     addMove: function () {
-      this.sequence.push(this.colors[Math.floor(Math.random() * 4)])
+      this.sequence.push(this.colors[Math.floor(Math.random() * 4)].name)
     },
     tellMoves: function () {
       var tell = setInterval(function () {
-        var color = this.sequence[this.step].name
+        var color = this.sequence[this.step]
         $('#' + color).velocity({opacity: 0.72}, {duration: 500})
         $('#' + color).velocity('reverse')
         if (this.step === this.sequence.length - 1) {
@@ -51,8 +61,13 @@ var Simon = new Vue({
           clearInterval(tell)
           this.step = 0
         } else { this.step += 1 }
-      }.bind(Simon), 2000)
+      }.bind(Simon), 1500)
     },
-    playerTurn: function () {}
+    listen: function (color) {
+      if (this.status !== 'waiting') { return }
+      if (color === sequence[step]) {
+        console.log('Correct')
+      }
+    }
   }
 })

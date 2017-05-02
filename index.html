@@ -23,13 +23,13 @@
           :key="color.name"
           v-bind:clr="color.name"
           v-bind:hex="color.hex"
-          :disabled="status != 'waiting' ? true : false">
+        >
         </gamebutton>
       </div>
       <div>
-        <button @click.prevent="startGame">Start</button>
-        <button @click.prevent="addMove">Add move</button>
-        <button @click.prevent="tellMoves(sequence)">Tell move</button>
+        <button v-if="status === 'gameOver'" @click.prevent="startGame">Start</button>
+        <button v-if="debug" @click.prevent="addMove">Add move</button>
+        <button v-if="debug" @click.prevent="tellMoves(sequence)">Tell move</button>
       </div>
     </main>
      
