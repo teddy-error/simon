@@ -16,7 +16,7 @@
     <h1 class="text-center">SIMON</h1>
   </div>
     <main id="simon">
-      <p>{{ sequence }}</p><br>
+      <p v-if="debug">{{ sequence }}</p><br>
       <div id="gbuttons" style="width:100%;">
         <gamebutton 
           v-for="color in colors" 
@@ -27,7 +27,9 @@
         </gamebutton>
       </div>
       <div>
-        <button v-if="status === 'gameOver'" @click.prevent="startGame">Start</button>
+        <button v-if="status === 'gameOver'"
+          @click.prevent="startGame"
+        >Start</button>
         <button v-if="debug" @click.prevent="addMove">Add move</button>
         <button v-if="debug" @click.prevent="tellMoves(sequence)">Tell move</button>
       </div>
