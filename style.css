@@ -65,7 +65,7 @@ div#gbuttons
 }
 .gamebutts:nth-child(2)
 {
-    box-shadow: 5px 0 20px #228dff, 5px 0 40px #228dff, 31px 0 60px #228dff;
+    box-shadow: 5px 0 20px #228dff, 5px 0 40px #228dff, 10px 0 50px #228dff;
     border-top-right-radius: 90%;
 }
 .gamebutts:nth-child(3)
