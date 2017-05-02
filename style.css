@@ -9,10 +9,15 @@ body
 h1
 {
     font-family: Monoton;
-    font-size: 13vw;
+    font-size: 12vw;
     color: white;
     margin-top: 10%;
     margin-bottom: 5%;
+}
+@media (min-width: 675px){
+    h1 {
+        font-size: 85px;
+    }
 }
 p
 {
@@ -25,15 +30,16 @@ div#gbuttons
     position: absolute;
     right: 0;
     left: 0;
+    width: 12em;
+    height: 12em;
     margin: 0 auto;
     display: inline-block;
-    width: 12rem;
-    height: 12em;
-    max-width: 740px;
+    max-width: 900px;
     padding-bottom: 5%;
     padding-left: 3%;
     padding-right: 3%;
 }
+
 .glowdrop
 {
     box-shadow:  inset -20px -19px 50px rgba(136, 38, 38, 0.45),
@@ -49,23 +55,27 @@ div#gbuttons
 {
     display: inline-block;
     overflow: visible;
-
-    width: 50%;
-    height: 300px;
-    margin: 0;
+    margin: 0 auto;
+    width: 46%;
+    height: 12rem;
     padding: 0;
-
     border: none;
+}
+@media (min-width: 500px) {
+    .gamebutts {
+        margin: 0.5em;
+        height: 10rem;
+    }
 }
 .gamebutts:nth-child(1)
 {
-    box-shadow:  0 0 20px #f17, 0 0 40px #f17, 0 0 60px #f17;
+    box-shadow:  -5px 0 20px #f17, -5px 0 40px #f17, -7px 0 60px #f17;
     border-top-left-radius: 90%;
     z-index:1;
 }
 .gamebutts:nth-child(2)
 {
-    box-shadow: 5px 0 20px #228dff, 5px 0 40px #228dff, 10px 0 50px #228dff;
+    box-shadow: 5px 0 20px #228dff, 5px 0 40px #228dff, 7px 0 50px #228dff;
     border-top-right-radius: 90%;
 }
 .gamebutts:nth-child(3)
