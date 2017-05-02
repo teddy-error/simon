@@ -61,6 +61,9 @@ div#gbuttons
     padding: 0;
     border: none;
 }
+button:focus{
+    outline: none;
+}
 @media (min-width: 500px) {
     .gamebutts {
         margin: 0.5em;
