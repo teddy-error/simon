@@ -31,11 +31,11 @@ p
 }*/
 .glowdrop
 {
-    box-shadow: inset 0 0 50px #fff,
+    box-shadow:  inset -20px -19px 50px rgba(136, 38, 38, 0.45),
     inset 20px 0 80px #f0f,
     inset -20px 0 80px #0ff,
     inset 20px 0 300px #f0f,
-    inset -20px 0 300px #0ff,
+    inset 8px 16px 300px #0ff,
     0 0 50px #fff,
     -10px 0 80px #f0f,
     10px 0 80px #0ff;
@@ -54,27 +54,50 @@ p
 }
 .gamebutts:nth-child(1)
 {
-    animation: neon1 1.5s ease-in-out infinite alternate;
+    box-shadow:  0 0 20px #f17, 0 0 40px #f17, 0 0 60px #f17;
     border-top-left-radius: 50%;
+    z-index:1;
 }
 .gamebutts:nth-child(2)
 {
-    animation: neon2 1.5s ease-in-out infinite alternate;
+    box-shadow: 5px 0 20px #228dff, 5px 0 40px #228dff, 31px 0 60px #228dff;
     border-top-right-radius: 50%;
 }
 .gamebutts:nth-child(3)
 {
-    animation: neon4 1.5s ease-in-out infinite alternate;
+    box-shadow:  0 0 20px #b6ff00, 0 0 40px #b6ff00, 0 0 60px #b6ff00;
     border-bottom-left-radius: 50%;
     position: relative;
     bottom: 10px;
 }
 .gamebutts:nth-child(4)
 {
-    animation: neon3 1.5s ease-in-out infinite alternate;
+    box-shadow:  0 0 20px #ffdd1b, 0 0 40px #ffdd1b, 0 0 60px #ffdd1b;
     border-bottom-right-radius: 50%;
     position: relative;
     bottom: 10px;
+}
+.gamebutts:nth-child(1):hover
+{
+    animation: neon1 1.5s ease-in-out alternate;
+
+}
+.gamebutts:nth-child(2):hover
+{
+    animation: neon2 1.5s ease-in-out alternate;
+
+}
+.gamebutts:nth-child(3):hover
+{
+    animation: neon4 1.5s ease-in-out alternate;
+
+
+
+}
+.gamebutts:nth-child(4):hover
+{
+    animation: neon3 1.5s ease-in-out alternate;
+
 }
 .highlight
 {
@@ -97,11 +120,11 @@ p
 {
     from
     {
-        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff, 0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 5px 0 40px #228dff, 10px 0 70px #228dff, 20px 0 80px #228dff, 30px 0 100px #228dff, 40px 0 150px #228dff
     }
     to
     {
-        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff, 0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 5px 0 20px #228dff, 10px 0 35px #228dff, 20px 0px 40px #228dff, 30px 0 50px #228dff, 40px 0 75px #228dff
     }
 }
 
@@ -128,4 +151,12 @@ p
     {
         box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #b6ff00, 0 0 35px #b6ff00, 0 0 40px #b6ff00, 0 0 50px #b6ff00, 0 0 75px #b6ff00;
     }
+}
+/* latin */
+@font-face {
+  font-family: 'Monoton';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Monoton'), local('Monoton-Regular'), url(https://fonts.gstatic.com/s/monoton/v6/au96iQ3WM1J9H5fMga5i0QLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
