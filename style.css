@@ -10,39 +10,23 @@ h1
 {
     font-family: Monoton;
     font-size: 12vw;
-    color: white;
+    line-height: 60px;
+
     margin-top: 10%;
     margin-bottom: 5%;
+
+    color: white;
 }
-@media (min-width: 675px){
-    h1 {
+@media (min-width: 675px)
+{
+    h1
+    {
         font-size: 85px;
     }
 }
-p
-{
-    z-index: 999;
-
-    color: white;
-}
-div#gbuttons
-{
-    position: absolute;
-    right: 0;
-    left: 0;
-    width: 12em;
-    height: 12em;
-    margin: 0 auto;
-    display: inline-block;
-    max-width: 900px;
-    padding-bottom: 5%;
-    padding-left: 3%;
-    padding-right: 3%;
-}
-
 .glowdrop
 {
-    box-shadow:  inset -20px -19px 50px rgba(136, 38, 38, 0.45),
+    box-shadow: inset -20px -19px 50px rgba(136, 38, 38, .45),
     inset 20px 0 80px #f0f,
     inset -20px 0 80px #0ff,
     inset 20px 0 300px #f0f,
@@ -51,71 +35,120 @@ div#gbuttons
     -10px 0 80px #f0f,
     10px 0 80px #0ff;
 }
+p
+{
+    z-index: 999;
+
+    color: white;
+}
+.icono-play {
+    color: white;
+}
+div#gbuttons
+{
+    position: absolute;
+    right: 0;
+    left: 0;
+
+    display: inline-flex;
+    display: inline-block;
+
+    width: 12em;
+    max-width: 750px;
+    height: 12em;
+    margin: 0 auto;
+
+    justify-content: center;
+}
+.buttwrap
+{
+    display: inline-flex;
+
+    width: 50%;
+    height: 12rem;
+}
 .gamebutts
 {
     display: inline-block;
     overflow: visible;
+
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
-    width: 46%;
-    height: 12rem;
     padding: 0;
+
     border: none;
 }
-button:focus{
+
+button:focus
+{
     outline: none;
 }
-@media (min-width: 500px) {
-    .gamebutts {
-        margin: 0.5em;
-        height: 10rem;
+
+button#red
+{
+    z-index: 1;
+    border-radius: 0;    
+    box-shadow: -5px 0 20px #f17, -5px 0 40px #f17, -7px 0 60px #f17;
+}
+@media (min-width: 400px)
+{
+    button#red
+    {
+        border-top-left-radius: 90%;
     }
 }
-.gamebutts:nth-child(1)
-{
-    box-shadow:  -5px 0 20px #f17, -5px 0 40px #f17, -7px 0 60px #f17;
-    border-top-left-radius: 90%;
-    z-index:1;
-}
-.gamebutts:nth-child(2)
+button#blue
 {
     box-shadow: 5px 0 20px #228dff, 5px 0 40px #228dff, 7px 0 50px #228dff;
-    border-top-right-radius: 90%;
+    border-radius: 0;    
 }
-.gamebutts:nth-child(3)
+@media (min-width: 400px)
 {
-    box-shadow:  0 0 20px #b6ff00, 0 0 40px #b6ff00, 0 0 60px #b6ff00;
-    border-bottom-left-radius: 90%;
-    position: relative;
-    bottom: 0px;
+    button#blue
+    {
+        border-top-right-radius: 90%;
+    }
 }
-.gamebutts:nth-child(4)
+button#green
 {
-    box-shadow:  0 0 20px #ffdd1b, 0 0 40px #ffdd1b, 0 0 60px #ffdd1b;
-    border-bottom-right-radius: 90%;
-    position: relative;
-    bottom: 0px;
+    box-shadow: 0 0 20px #b6ff00, 0 0 40px #b6ff00, 0 0 60px #b6ff00;
+    border-radius: 0;    
 }
-.gamebutts:nth-child(1):hover
+@media (min-width: 400px)
+{
+    button#green
+    {
+        border-bottom-left-radius: 90%;
+    }
+}
+button#yellow
+{
+    box-shadow: 0 0 20px #ffdd1b, 0 0 40px #ffdd1b, 0 0 60px #ffdd1b;
+    border-radius: 0;    
+}
+@media (min-width: 400px)
+{
+    button#yellow
+    {
+        border-bottom-right-radius: 90%;
+    }
+}
+button#red:hover
 {
     animation: neon1 1.5s ease-in-out infinite alternate;
-
 }
-.gamebutts:nth-child(2):hover
+button#blue:hover
 {
     animation: neon2 1.5s ease-in-out infinite alternate;
-
 }
-.gamebutts:nth-child(3):hover
+button#green:hover
 {
     animation: neon4 1.5s ease-in-out infinite alternate;
-
-
-
 }
-.gamebutts:nth-child(4):hover
+button#yellow:hover
 {
     animation: neon3 1.5s ease-in-out infinite alternate;
-
 }
 .highlight
 {
@@ -138,11 +171,11 @@ button:focus{
 {
     from
     {
-        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 5px 0 40px #228dff, 10px 0 70px #228dff, 20px 0 80px #228dff, 30px 0 100px #228dff, 40px 0 150px #228dff
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 5px 0 40px #228dff, 10px 0 70px #228dff, 20px 0 80px #228dff, 30px 0 100px #228dff, 40px 0 150px #228dff;
     }
     to
     {
-        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 5px 0 20px #228dff, 10px 0 35px #228dff, 20px 0px 40px #228dff, 30px 0 50px #228dff, 40px 0 75px #228dff
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 5px 0 20px #228dff, 10px 0 35px #228dff, 20px 0 40px #228dff, 30px 0 50px #228dff, 40px 0 75px #228dff;
     }
 }
 
@@ -171,10 +204,22 @@ button:focus{
     }
 }
 /* latin */
-@font-face {
-  font-family: 'Monoton';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Monoton'), local('Monoton-Regular'), url(https://fonts.gstatic.com/s/monoton/v6/au96iQ3WM1J9H5fMga5i0QLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+@font-face
+{
+    font-family: 'Monoton';
+    font-weight: 400;
+    font-style: normal;
+
+    src: local('Monoton'), local('Monoton-Regular'), url(https://fonts.gstatic.com/s/monoton/v6/au96iQ3WM1J9H5fMga5i0QLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+    unicode-range: U+0000-00FF,
+    U+0131,
+    U+0152-0153,
+    U+02C6,
+    U+02DA,
+    U+02DC,
+    U+2000-206F,
+    U+2074,
+    U+20AC,
+    U+2212,
+    U+2215;
 }

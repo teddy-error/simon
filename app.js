@@ -1,10 +1,12 @@
 /* global vue */
 Vue.component('gamebutton', {
-  template: `<button
-              v-on:click="press"
-              :id=color
-              v-bind:style="styles"
-              class="gamebutts"></button>`,
+  template: `<div class="buttwrap">
+                <button
+                v-on:click="press"
+                :id=color
+                v-bind:style="styles"
+                class="gamebutts"></button>
+              </div>`,
   props: ['clr', 'hex'],
   data: function () {
     return {
