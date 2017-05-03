@@ -25,7 +25,7 @@
     background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222 0%, #222 50%) 0 / 15px 15px;
     background-color: #222;
 }
-#myCanvas
+#fogHeader
 {
     position: top -75px;
     position: center;
@@ -37,14 +37,12 @@
     height: 100px;
 }
 
+
 h1
 {
     font-family: Monoton;
     font-size: 12vw;
     line-height: 60px;
-
-    margin-top: 10%;
-    margin-bottom: 5%;
 
     color: white;
 }
@@ -72,11 +70,11 @@ p
 
     color: white;
 }
-.icon--play
+.icon-ei--play
 {
     color: white;
 }
-.icon--play:hover
+.icon-ei-play:hover
 {
     box-shadow: inset -20px -19px 50px rgba(136, 38, 38, .45),;
 }
@@ -97,26 +95,22 @@ div#gbuttons
     right: 0;
     left: 0;
 
-    display: inline-flex;
-    display: inline-block;
-
-    width: 12em;
+    width: 90%;
     max-width: 750px;
-    height: 12em;
     margin: 0 auto;
 
     justify-content: center;
 }
 .buttwrap
 {
-    display: inline-flex;
+    display: inline-block;
 
     width: 50%;
     height: 12rem;
 }
 .gamebutts
 {
-    display: inline-block;
+    display: inline;
     overflow: visible;
 
     width: 100%;

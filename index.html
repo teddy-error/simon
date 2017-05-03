@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
   <title>Simon</title>
+  <script src="https://cdn.jsdelivr.net/evil-icons/1.9.0/evil-icons.min.js"></script>
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/velocity/1.5/velocity.min.js"></script>
@@ -8,11 +9,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/evil-icons/1.9.0/evil-icons.min.css">
-  <script src="https://cdn.jsdelivr.net/evil-icons/1.9.0/evil-icons.min.js"></script>
   <link href="style.css" rel="stylesheet">
 </head> 
 <body>
-  <canvas id="myCanvas" height="200" width="800"></canvas>
+  <canvas id="fogHeader"></canvas>
   <div id="header" class="glowdrop">
     <h1 class="text-center">SIMON</h1>
   </div>
@@ -27,15 +27,7 @@
         >
         </gamebutton>
       </div>
-      <div>
-        <span 
-          class="icono-play"
-          v-if="status === 'gameOver'"
-          @click.prevent="startGame"
-        ></span>
-        <button v-if="debug" @click.prevent="addMove">Add move</button>
-        <button v-if="debug" @click.prevent="tellMoves(sequence)">Tell move</button>
-      </div>-->
+     <start></start> 
     </main>
      
 <script src="app.js"> </script>
