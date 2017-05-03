@@ -1,6 +1,5 @@
 /* global vue */
 Vue.component('gamebutton', {
-<<<<<<< Updated upstream
   template: `<div class="buttwrap">
                 <button
                 v-on:click="press"
@@ -8,14 +7,6 @@ Vue.component('gamebutton', {
                 v-bind:style="styles"
                 class="gamebutts"></button>
               </div>`,
-=======
-  template: `<button
-              v-show="Simon.status !== 'gameOver'
-              v-on:click="press"
-              :id=color
-              v-bind:style="styles"
-              class="gamebutts"></button>`,
->>>>>>> Stashed changes
   props: ['clr', 'hex'],
   data: function () {
     return {

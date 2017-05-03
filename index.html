@@ -6,14 +6,9 @@
   <script src="https://cdn.jsdelivr.net/velocity/1.5/velocity.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.js"></script>
-<<<<<<< Updated upstream
-  <link href="https://fonts.googleapis.com/css?family=Audiowide|Iceland|Monoton|Pacifico|Press+Start+2P|Vampiro+One" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/evil-icons/1.9.0/evil-icons.min.css">
   <script src="https://cdn.jsdelivr.net/evil-icons/1.9.0/evil-icons.min.js"></script>
-=======
->>>>>>> Stashed changes
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
 </head> 
 <body>
@@ -32,23 +27,12 @@
         >
         </gamebutton>
       </div>
-<<<<<<< Updated upstream
       <div>
-        <i 
-          data-icon="ei-play"
-          data-size="xxl"
+        <span 
+          class="icono-play"
           v-if="status === 'gameOver'"
           @click.prevent="startGame"
-        ></i>
-=======
-      <div
-        id="starter"
-        v-if="status === 'gameOver'"
-        @click.prevent="startGame" >
-        <span data-icon="ei-play" data-size="l" >Begin</span>
-        </div>
-      <!--<div>
->>>>>>> Stashed changes
+        ></span>
         <button v-if="debug" @click.prevent="addMove">Add move</button>
         <button v-if="debug" @click.prevent="tellMoves(sequence)">Tell move</button>
       </div>-->
