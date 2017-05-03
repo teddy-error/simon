@@ -1,4 +1,40 @@
 /* global $, Vue */
+Vue.component('start', {
+  template: `<div v-if="Simon.status === 'gameOver'" @click.prevent="play">
+        <span 
+          data-icon="ei-play"
+          data-size="xxl"
+        ></span>
+      </div>`
+})
+Vue.component('gamebutton', {
+  template: `<div class="buttwrap">
+                <button
+                v-on:click="press"
+                :id=color
+                v-bind:style="styles"
+                class="gamebutts"></button>
+              </div>`,
+  props: ['clr', 'hex'],
+  data: function () {
+    return {
+      color: this.clr,
+      status,
+      styles: {
+        'background-color': this.hex
+      }
+    }
+  },
+  methods: {
+    press: function () {
+      $('#' + this.color)
+        .velocity({scale: 1.25}, {duration: 150})
+        .velocity('reverse')
+      console.log(this.color + ' pressed')
+      Simon.listen(this.color)
+    }
+  }
+})
 
 var Simon = new Vue({
   el: '#simon',
@@ -46,39 +82,6 @@ var Simon = new Vue({
           Simon.play()
         } else { this.step += 1 }
       } else { this.status = 'gameOver' }
-    }
-  }
-})
-Vue.component('start', {
-  template: `<div v-if="Simon.status === 'gameOver'" @click.prevent="play">
-        <span 
-          data-icon="ei-play"
-          data-size="xxl"
-        ></span>
-      </div>`
-})
-Vue.component('gamebutton', {
-  template: `<div class="buttwrap">
-                <button
-                v-on:click="press"
-                :id=color
-                v-bind:style="styles"
-                class="gamebutts"></button>
-              </div>`,
-  props: ['clr', 'hex'],
-  data: function () {
-    return {
-      color: this.clr,
-      status,
-      styles: {
-        'background-color': this.hex
-      }
-    }
-  },
-  methods: {
-    press: function () {
-      console.log(this.color + ' pressed')
-      Simon.listen(this.color)
     }
   }
 })
