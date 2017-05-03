@@ -7,7 +7,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Audiowide|Iceland|Monoton|Pacifico|Press+Start+2P|Vampiro+One" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="http://icono-49d6.kxcdn.com/icono.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/evil-icons/1.9.0/evil-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/evil-icons/1.9.0/evil-icons.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
@@ -28,11 +29,12 @@
         </gamebutton>
       </div>
       <div>
-        <span 
-          class="icono-play"
+        <i 
+          data-icon="ei-play"
+          data-size="xxl"
           v-if="status === 'gameOver'"
           @click.prevent="startGame"
-        ></span>
+        ></i>
         <button v-if="debug" @click.prevent="addMove">Add move</button>
         <button v-if="debug" @click.prevent="tellMoves(sequence)">Tell move</button>
       </div>

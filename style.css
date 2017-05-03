@@ -41,8 +41,18 @@ p
 
     color: white;
 }
-.icono-play {
-    color: white;
+.icon--ei-play {
+    fill: white;
+}
+.icon--ei-play:hover {
+     box-shadow: inset -20px -19px 50px rgba(136, 38, 38, .45),
+    inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff,
+    inset 20px 0 300px #f0f,
+    inset 8px 16px 300px #0ff,
+    0 0 50px #fff,
+    -10px 0 80px #f0f,
+    10px 0 80px #0ff;
 }
 div#gbuttons
 {
